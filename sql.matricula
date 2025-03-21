@@ -1,0 +1,13 @@
+SELECT
+    matricula.id
+	,pessoa.id as idpessoa
+    ,pessoa.nome as nomepessoa
+    ,curso.nome as nomecurso
+FROM 
+     matricula
+     inner join pessoa on (
+         pessoa.id = matricula.idpessoa
+         )
+         inner join curso on (
+             curso.id = matricula.idcurso
+         );
